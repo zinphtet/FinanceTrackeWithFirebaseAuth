@@ -1,0 +1,38 @@
+.header {
+	/* border: 2px solid rebeccapurple; */
+	height: 10vh;
+	color: #fff;
+	background-image: linear-gradient(to right, #61e6689f, #5ea36fa8);
+	padding: 0 5rem;
+	display: flex;
+}
+.brand {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.brand li {
+	font-size: 2.5rem;
+	cursor: pointer;
+}
+.nav_ul {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.nav_ul li {
+	margin: 0 2rem;
+	font-size: 1.3rem;
+	cursor: pointer;
+}
+
+.logout {
+	border: 1px solid black;
+	padding: 0.5rem 1rem;
+}
+.logout:hover {
+	background-color: #0c090931;
+	border-color: transparent;
+}

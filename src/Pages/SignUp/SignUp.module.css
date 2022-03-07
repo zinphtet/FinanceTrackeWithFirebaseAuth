@@ -1,0 +1,23 @@
+.sign_up_page {
+	width: 100%;
+	padding: 5rem 0;
+	position: relative;
+	height: 85vh;
+}
+.signup_form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.signup_form > div {
+	padding: 0.5rem;
+	margin: 1rem;
+}
+.signup_form > div input {
+	padding: 0.5rem;
+	outline: none;
+	border: 2px solid green;
+	width: 20rem;
+	border-radius: 0.2rem;
+}

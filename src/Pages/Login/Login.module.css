@@ -1,0 +1,29 @@
+.login_page {
+	width: 100%;
+	padding: 5rem 0;
+	position: relative;
+	height: 85vh;
+}
+.login_form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.login_form > div {
+	padding: 0.5rem;
+	margin: 1rem;
+}
+.login_form > div input {
+	padding: 0.5rem;
+	outline: none;
+	border: 2px solid green;
+	width: 20rem;
+	border-radius: 0.2rem;
+}
+/* .btn {
+	padding: 0.5rem;
+	border: 2px solid green;
+	background-color: white;
+	cursor: pointer;
+} */
