@@ -3,6 +3,9 @@ import  style from './SignUp.module.css';
 import {useState} from 'react'
 import useSignup from '../../customHooks/useSignup';
 import { auth } from '../../firebase/firebase';
+
+
+
 function SignUp() {
   const [name , setName] = useState('')
   const [email , setEmail] = useState('')
@@ -24,9 +27,8 @@ const signUpFormSubmit = (e)=>{
   e.preventDefault();
 
   console.log(name , email , password)
-
   signup(auth,email,password,name)
-
+  
   setName('')
   setEmail('')
   setPassword('')
@@ -42,6 +44,7 @@ const signUpFormSubmit = (e)=>{
                 placeholder='Name'
                 value={name}
                 onChange={nameHanlder}
+                required
                  />
 
                </div>
@@ -52,6 +55,7 @@ const signUpFormSubmit = (e)=>{
                placeholder='Email'
                value={email}
                onChange={emailHandler}
+               required
                 />
               </div>
               <div 
@@ -61,6 +65,7 @@ const signUpFormSubmit = (e)=>{
                 placeholder='Password'
                 value={password}
                 onChange={passwordHandler}
+                required
                  />
               </div>
                <div >

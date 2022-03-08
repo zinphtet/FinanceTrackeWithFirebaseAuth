@@ -20,4 +20,5 @@
 	border: 2px solid green;
 	width: 20rem;
 	border-radius: 0.2rem;
+	font-family: inherit;
 }

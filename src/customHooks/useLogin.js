@@ -1,11 +1,10 @@
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../AuthContext/AuthContex';
-
-const useSignup = () => {
-	const [unMount, setUnMount] = useState(false);
+const useLogin = () => {
 	const [isPending, setPending] = useState(false);
 	const [error, setError] = useState(null);
+	const [unMount, setUnMount] = useState(false);
 	const { dispatch } = useContext(AuthContext);
 
 	useEffect(() => {
@@ -14,19 +13,12 @@ const useSignup = () => {
 		};
 	}, []);
 
-	const signup = async (myAuth, email, password, name) => {
+	const login = async (myAuth, email, password) => {
 		try {
 			setPending(true);
-			const user = await createUserWithEmailAndPassword(
-				myAuth,
-				email,
-				password
-			);
-			if (!user) throw new Error("Can't create user ...");
-			await updateProfile(myAuth.currentUser, {
-				displayName: name,
-			});
-			dispatch({ type: 'SIGN_UP', payload: user });
+			const user = await signInWithEmailAndPassword(myAuth, email, password);
+			if (!user) throw new Error("Can't login user ...");
+			dispatch({ type: 'LOG_IN', payload: user });
 			if (!unMount) setPending(false);
 		} catch (err) {
 			if (!unMount) {
@@ -39,8 +31,8 @@ const useSignup = () => {
 	return {
 		isPending,
 		error,
-		signup,
+		login,
 	};
 };
 
-export default useSignup;
+export default useLogin;

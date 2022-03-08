@@ -5,6 +5,7 @@
 }
 body {
 	color: #777;
+	font-family: 'Poppins', sans-serif;
 }
 li {
 	list-style-type: none;
@@ -18,4 +19,8 @@ a {
 	border: 2px solid green;
 	background-color: white;
 	cursor: pointer;
+	font-family: inherit;
+}
+.btn:hover {
+	opacity: 0.8;
 }
