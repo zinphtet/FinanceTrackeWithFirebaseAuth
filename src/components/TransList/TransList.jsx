@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import React from 'react'
 import Trans from '../trans/Trans'
 import './TransList.css'
 import useFirebase from '../../customHooks/useFirebase'

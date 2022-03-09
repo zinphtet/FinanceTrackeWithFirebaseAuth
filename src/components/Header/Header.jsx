@@ -10,7 +10,7 @@ import { signOut } from 'firebase/auth';
 function Header() {
   const navigate = useNavigate()
   const {user , dispatch} = useContext(AuthContext)
-  console.log(user)
+ 
   return (
     <div className='header'>
         <div className="brand">
@@ -36,7 +36,7 @@ function Header() {
                      Logout</li>
              </>
            }
-           {/* {user.user.displayName} */}
+       
            
         </ul>
     </div>

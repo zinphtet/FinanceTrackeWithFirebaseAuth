@@ -42,7 +42,7 @@ const useFirebase = () => {
 		documents: [],
 	});
 	const { user, authReady } = useContext(AuthContext);
-	console.log(user);
+
 	//Collection ref
 	const colRef = collection(db, 'transcations');
 
@@ -85,7 +85,7 @@ const useFirebase = () => {
 			docs.forEach((doc) =>
 				arr.push({ ...doc.data(), id: doc.id, uid: user.uid })
 			);
-			console.log(arr);
+
 			if (!cancel) dispatch({ type: 'SET_DOCS', payload: arr });
 		});
 

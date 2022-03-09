@@ -22,7 +22,5 @@ const app = initializeApp(firebaseConfig);
 //authentication
 export const auth = getAuth();
 
-// useEffect(() => console.log(auth.currentUser));
-
 //firestore database
 export const db = getFirestore();
