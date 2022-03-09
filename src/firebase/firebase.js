@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 // import {getAuth}
 // TODO: Add SDKs for Firebase products that you want to use
@@ -22,3 +23,6 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 
 // useEffect(() => console.log(auth.currentUser));
+
+//firestore database
+export const db = getFirestore();

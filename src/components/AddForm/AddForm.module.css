@@ -1,0 +1,18 @@
+.addform input {
+	display: block;
+	padding: 0.5rem;
+	border-radius: none;
+	outline: none;
+	border: 2px solid green;
+	margin: 1.5rem 0;
+	width: 300px;
+}
+.addform form {
+	/* border: 1px solid red; */
+	width: fit-content;
+	margin: 0 auto;
+}
+.addform {
+	flex: 1;
+	/* border: 1px solid rebeccapurple; */
+}

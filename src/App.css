@@ -24,3 +24,9 @@ a {
 .btn:hover {
 	opacity: 0.8;
 }
+.bigbtn {
+	padding: 0.5rem 1.2rem;
+}
+input {
+	font-family: inherit;
+}
